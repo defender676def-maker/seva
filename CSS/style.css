@@ -1,0 +1,217 @@
+body {
+    background-color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    color: #333;
+}
+
+.meniu {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 25px 40px;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: #fff;
+}
+
+.meniu a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.meniu a:hover {
+    color: #e8a000;
+}
+
+.sectiune {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.sectiune-titlu {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 26px;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+.sectiune-titlu img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.sectiune-descriere {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #666;
+    max-width: 800px;
+    margin-bottom: 30px;
+}
+
+.linie {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 30px 0;
+}
+
+.produse {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    padding-bottom: 20px;
+}
+
+.poza-container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.poza-container img {
+    max-width: 180px;
+    max-height: 280px;
+    object-fit: contain;
+}
+
+.new-badge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #d32f2f;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.informatii {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.informatii h2 {
+    font-size: 22px;
+    font-weight: 300;
+    margin: 0 0 10px 0;
+    color: #000;
+}
+
+.informatii .locatie {
+    color: #333;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.informatii p {
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 0 0 15px 0;
+    color: #555;
+}
+
+.specificatii {
+    color: #e8a000 !important;
+    font-size: 14px !important;
+    font-weight: 400;
+    margin-bottom: 20px !important;
+}
+
+.pret-rand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.pret-rand .icon-pret {
+    width: 24px;
+    height: 24px;
+}
+
+.pret-rand span {
+    font-size: 15px;
+    color: #333;
+}
+
+.jos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    background: #fff;
+    margin-top: auto;
+}
+
+.jos label {
+    font-size: 14px;
+    color: #333;
+}
+
+.jos .butoane {
+    display: flex;
+    gap: 15px;
+}
+
+.jos button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+    padding: 0 5px;
+    transition: color 0.3s;
+}
+
+.jos button:hover {
+    color: #e8a000;
+}
+
+.jos a {
+    text-decoration: none;
+    color: #e8a000;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.jos a:hover {
+    color: #c98900;
+}
+
+/* Pentru ecrane mai mici */
+@media (max-width: 900px) {
+    .produse {
+        grid-template-columns: 1fr;
+    }
+    
+    .meniu {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}
