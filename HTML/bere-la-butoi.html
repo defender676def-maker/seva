@@ -3,53 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bere Live</title>
+  <title>Bere la Butoi</title>
   <link rel="stylesheet" href="/CSS/style.css">
 </head>
 <body>
 
   <div class="top-bar">
     <div class="top-bar-left">
-      <a href="index.html" class="active">BERE LIVE</a>
+      <a href="index.html">BERE LIVE</a>
       <a href="bere-artizanala.html">BERE ARTIZANALĂ</a>
+      <a href="bere-la-butoi.html" class="active">BERE LA BUTOI</a>
       <a href="aperitive.html">APERITIVE</a>
       <a href="despre-noi.html">DESPRE NOI</a>
       <a href="contact.html">CONTACT</a>
     </div>
     <div class="top-bar-right">
-      <div id="auth-btns" style="display:flex;gap:10px;">
-        <a href="login.html" class="top-btn">Log In</a>
-        <a href="register.html" class="top-btn">Register</a>
-      </div>
+      <a href="login.html" class="top-btn">Log In</a>
+      <a href="register.html" class="top-btn">Register</a>
       <div id="user-panel" style="display:none;gap:10px;align-items:center;">
         <span id="user-name" style="font-size:13px;color:#333;"></span>
         <button id="btn-logout" class="top-btn">Delogare</button>
       </div>
-      <button id="btn-cos" class="top-btn cart-btn">Coș <span id="cart-count" class="cart-badge">0</span></button>
+      <button id="btn-cos" class="top-btn cart-btn">🛒 Coș <span id="cart-count" class="cart-badge">0</span></button>
     </div>
   </div>
 
   <div class="sectiune">
     <div class="sectiune-titlu">
-      <span style="font-size:40px;"></span>
-      Bere live
+      <img src="/Assets/Images/Butoi.png" alt="butoi">
+      Bere la butoi
     </div>
     <p class="sectiune-descriere">
-      Berea live este renumită de mult timp pentru proprietățile sale benefice. Berea live conține cantități mari de elemente benefice, cum ar fi calciu, mangan, fosfor și fier.
+      Secțiune în dezvoltare. În curând veți putea comanda bere proaspătă la butoi.
     </p>
-    <hr class="linie">
-
-    <div class="produse-grid" id="produse-bere-live">
-      <p style="text-align:center;padding:40px;">Se încarcă produsele...</p>
-    </div>
   </div>
 
   <div id="modal-cos" class="modal">
     <div class="modal-content">
       <span class="close-modal">&times;</span>
-      <h2>🛒 Coșul tău</h2>
+      <h2>Coșul tău</h2>
       <div id="cos-list"></div>
-      <div class="cos-total">Total: <span id="cos-total">0.00</span> lei</div>
+      <div class="cos-total">Total: <span id="cos-total">0.00</span></div>
       <button id="btn-goleste" class="btn-danger">Golește coșul</button>
     </div>
   </div>

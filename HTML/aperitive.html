@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bere Live</title>
+  <title>Gustări cu bere</title>
   <link rel="stylesheet" href="/CSS/style.css">
 </head>
 <body>
 
   <div class="top-bar">
     <div class="top-bar-left">
-      <a href="index.html" class="active">BERE LIVE</a>
+      <a href="index.html">BERE LIVE</a>
       <a href="bere-artizanala.html">BERE ARTIZANALĂ</a>
-      <a href="aperitive.html">APERITIVE</a>
+      <a href="aperitive.html" class="active">APERITIVE</a>
       <a href="despre-noi.html">DESPRE NOI</a>
       <a href="contact.html">CONTACT</a>
     </div>
@@ -32,22 +32,22 @@
   <div class="sectiune">
     <div class="sectiune-titlu">
       <span style="font-size:40px;"></span>
-      Bere live
+      Gustări cu bere
     </div>
     <p class="sectiune-descriere">
-      Berea live este renumită de mult timp pentru proprietățile sale benefice. Berea live conține cantități mari de elemente benefice, cum ar fi calciu, mangan, fosfor și fier.
+      „Berea fără gustări e o risipă de bani" — așa ai putea parafraza o zicală binecunoscută, și nu ar fi departe de adevăr. Într-adevăr, mulți iubitori de bere nu se pot lipsi de gustări, care sunt mult mai puțin interesante și mult mai puțin gustoase!
     </p>
     <hr class="linie">
 
-    <div class="produse-grid" id="produse-bere-live">
-      <p style="text-align:center;padding:40px;">Se încarcă produsele...</p>
+    <div class="produse-grid gustari-grid" id="gustari-container">
+      <!-- Se încarcă din JS -->
     </div>
   </div>
 
   <div id="modal-cos" class="modal">
     <div class="modal-content">
       <span class="close-modal">&times;</span>
-      <h2>🛒 Coșul tău</h2>
+      <h2>Coșul tău</h2>
       <div id="cos-list"></div>
       <div class="cos-total">Total: <span id="cos-total">0.00</span> lei</div>
       <button id="btn-goleste" class="btn-danger">Golește coșul</button>

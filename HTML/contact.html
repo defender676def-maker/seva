@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link rel="stylesheet" href="/CSS/style.css">
+</head>
+<body>
+
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <a href="index.html">BERE LIVE</a>
+      <a href="bere-artizanala.html">BERE ARTIZANALĂ</a>
+      <a href="aperitive.html">APERITIVE</a>
+      <a href="despre-noi.html">DESPRE NOI</a>
+      <a href="contact.html" class="active"> CONTACT</a>
+    </div>
+    <div class="top-bar-right">
+      <div id="auth-btns" style="display:flex;gap:10px;">
+        <a href="login.html" class="top-btn">Log In</a>
+        <a href="register.html" class="top-btn">Register</a>
+      </div>
+      <div id="user-panel" style="display:none;gap:10px;align-items:center;">
+        <span id="user-name" style="font-size:13px;color:#333;"></span>
+        <button id="btn-logout" class="top-btn">Delogare</button>
+      </div>
+      <button id="btn-cos" class="top-btn cart-btn">🛒 Coș <span id="cart-count" class="cart-badge">0</span></button>
+    </div>
+  </div>
+
+  <div class="sectiune">
+    <div class="sectiune-titlu">
+      <span style="font-size:40px;"></span>
+      Contact
+    </div>
+    <hr class="linie">
+
+    <div style="display: flex; justify-content: center;">
+      <div class="form-box" style="margin: 0 auto; width: 100%; max-width: 500px;">
+        <h2>Scrie-ne un mesaj</h2>
+        <form id="contact-form">
+          <div class="form-group">
+            <label>Nume complet</label>
+            <input type="text" name="nume" id="contact-nume" placeholder="Numele tău">
+            <div class="msg-eroare"></div>
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" name="email" id="contact-email" placeholder="email@example.com">
+            <div class="msg-eroare"></div>
+          </div>
+          <div class="form-group">
+            <label>Subiect</label>
+            <input type="text" name="subiect" id="contact-subiect" placeholder="Subiectul mesajului">
+            <div class="msg-eroare"></div>
+          </div>
+          <div class="form-group">
+            <label>Mesaj</label>
+            <textarea name="mesaj" id="contact-mesaj" rows="5" placeholder="Mesajul tău..."></textarea>
+            <div class="msg-eroare"></div>
+          </div>
+          <button type="submit" class="btn-primary">📨 Trimite mesaj</button>
+        </form>
+        <div id="contact-alert" class="alert"></div>
+      </div>
+    </div>
+
+    <div class="contact-info" style="margin-top: 40px; display: flex; gap: 40px; flex-wrap: wrap; justify-content: center;">
+      <div style="text-align: center;">
+        <h4>Adresă</h4>
+        <p>str. Berei 42, Chișinău, Moldova</p>
+      </div>
+      <div style="text-align: center;">
+        <h4>Telefon</h4>
+        <p>+373 123 456 78</p>
+      </div>
+      <div style="text-align: center;">
+        <h4>Email</h4>
+        <p>hello@berelive.md</p>
+      </div>
+      <div style="text-align: center;">
+        <h4>Program</h4>
+        <p>Luni - Vineri: 10:00 - 20:00<br>Sâmbătă: 11:00 - 18:00</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-cos" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h2>Coșul tău</h2>
+      <div id="cos-list"></div>
+      <div class="cos-total">Total: <span id="cos-total">0.00</span> lei</div>
+      <button id="btn-goleste" class="btn-danger">Golește coșul</button>
+    </div>
+  </div>
+
+  <script src="/JS/script.js"></script>
+</body>
+</html>

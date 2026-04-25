@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Înregistrare</title>
+  <link rel="stylesheet" href="/CSS/style.css">
+</head>
+<body>
+
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <a href="index.html">BERE LIVE</a>
+      <a href="bere-artizanala.html">BERE ARTIZANALĂ</a>
+      <a href="aperitive.html">APERITIVE</a>
+      <a href="despre-noi.html">DESPRE NOI</a>
+      <a href="contact.html">CONTACT</a>
+    </div>
+    <div class="top-bar-right">
+      <div id="auth-btns" style="display:flex;gap:10px;">
+        <a href="login.html" class="top-btn">Log In</a>
+        <a href="register.html" class="top-btn active">📝 Register</a>
+      </div>
+      <div id="user-panel" style="display:none;gap:10px;align-items:center;">
+        <span id="user-name" style="font-size:13px;color:#333;"></span>
+        <button id="btn-logout" class="top-btn">Delogare</button>
+      </div>
+      <button id="btn-cos" class="top-btn cart-btn">🛒 Coș <span id="cart-count" class="cart-badge">0</span></button>
+    </div>
+  </div>
+
+  <div class="auth-wrapper" style="display: flex; justify-content: center; align-items: center; min-height: 70vh;">
+    <div class="form-box">
+      <h2>Crează cont nou</h2>
+      <form id="reg-form">
+        <div class="form-group">
+          <label>Nume</label>
+          <input type="text" name="nume" id="reg-nume" placeholder="Numele tău">
+          <div class="msg-eroare"></div>
+        </div>
+        <div class="form-group">
+          <label>Prenume</label>
+          <input type="text" name="prenume" id="reg-prenume" placeholder="Prenumele tău">
+          <div class="msg-eroare"></div>
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" name="email" id="reg-email" placeholder="email@example.com">
+          <div class="msg-eroare"></div>
+        </div>
+        <div class="form-group">
+          <label>Telefon</label>
+          <input type="tel" name="telefon" id="reg-telefon" placeholder="0712345678">
+          <div class="msg-eroare"></div>
+        </div>
+        <div class="form-group">
+          <label>Parolă (minim 8 caractere)</label>
+          <input type="password" name="parola" id="reg-parola" placeholder="********">
+          <div class="msg-eroare"></div>
+        </div>
+        <div class="form-group">
+          <label>Confirmă parola</label>
+          <input type="password" name="confirma" id="reg-confirma" placeholder="********">
+          <div class="msg-eroare"></div>
+        </div>
+        <button type="submit" class="btn-primary">Înregistrează-te</button>
+      </form>
+      <div class="link-switch">Ai deja cont? <a href="login.html">Autentifică-te</a></div>
+      <div id="reg-alert" class="alert"></div>
+    </div>
+  </div>
+
+  <script src="/JS/script.js"></script>
+</body>
+</html>
