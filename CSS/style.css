@@ -630,3 +630,21 @@ body {
   .top-bar-right { flex-wrap: wrap; justify-content: center; }
   .gustari-grid { grid-template-columns: 1fr; }
 }
+
+/* Buton confirmare plată */
+#btn-plateste {
+  background: #2e7d32;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+#btn-plateste:hover {
+  background: #1b5e20;
+}

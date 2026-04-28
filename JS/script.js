@@ -362,7 +362,53 @@ document.addEventListener('DOMContentLoaded', function() {
           }
       }
   }
-
+var btnPlateste = document.getElementById('btn-plateste');
+if (btnPlateste) {
+    btnPlateste.onclick = function() {
+        var cart = DB.get('cart') || [];
+        
+        // Verificăm dacă coșul nu este gol
+        if (cart.length === 0) {
+            alert('⚠️ Coșul este gol! Adaugă produse pentru a finaliza comanda.');
+            return;
+        }
+        
+        // Calculăm totalul pentru confirmare
+        var total = cart.reduce(function(sum, item) {
+            return sum + (item.price * item.qty);
+        }, 0).toFixed(2);
+        
+        // Confirmare înainte de "plată"
+        if (confirm('Doriți să confirmați comanda în valoare de ' + total + ' lei?\n\nProduse: ' + cart.length)) {
+            
+            // Simulăm procesarea comenzii
+            var comanda = {
+                id: Date.now(),
+                data: new Date().toLocaleString('ro-MD'),
+                produse: cart,
+                total: total,
+                status: 'confirmată'
+            };
+            
+            // Salvăm comanda în localStorage (simulare backend)
+            var comenzi = DB.get('comenzi') || [];
+            comenzi.push(comanda);
+            DB.save('comenzi', comenzi);
+            
+            // Golim coșul după confirmare
+            DB.remove('cart');
+            renderCart();
+            updateCartUI();
+            
+            // Mesaj de succes
+            alert('✅ Comanda #' + comanda.id + ' a fost confirmată!\n\nTotal: ' + total + ' lei\n\nVă mulțumim pentru achiziție! 🍺');
+            
+            // Închidem modalul
+            var modal = document.getElementById('modal-cos');
+            if (modal) modal.style.display = "none";
+        }
+    }
+}
   // formularul de înregistrare
   var regForm = document.getElementById('reg-form');
   if(regForm) {
@@ -423,3 +469,4 @@ function checkAuth() {
     }
   }
 }
+console.log("✅ Platformă încărcată. Coș și autentificare funcționale.");
